@@ -1,0 +1,20 @@
+2026-02-18 23:26:37 - omnicoreagent - INFO - Initialized In-Memory Event Store
+2026-02-18 23:27:52 - omnicoreagent - INFO - Initialized In-Memory Event Store
+2026-02-18 23:28:30 - omnicoreagent - INFO - Initialized In-Memory Event Store
+2026-02-18 23:28:30 - omnicoreagent - INFO - DeepAgent 'OmniClaw': Initializing...
+2026-02-18 23:28:30 - omnicoreagent - INFO - DeepAgent 'OmniClaw': Initialization complete
+2026-02-18 23:28:30 - omnicoreagent - ERROR - Configuration transformation failed: ModelConfig.__init__() got an unexpected keyword argument 'model_name'
+2026-02-18 23:29:28 - omnicoreagent - INFO - Initialized In-Memory Event Store
+2026-02-18 23:29:28 - omnicoreagent - INFO - DeepAgent 'OmniClaw': Initializing...
+2026-02-18 23:29:28 - omnicoreagent - INFO - DeepAgent 'OmniClaw': Initialization complete
+2026-02-18 23:29:28 - omnicoreagent - WARNING - No MCP tools provided, using local tools only
+2026-02-18 23:29:28 - omnicoreagent - INFO - Successfully transformed configuration for 0 MCP tools
+2026-02-18 23:30:10 - omnicoreagent - INFO - Initialized In-Memory Event Store
+2026-02-18 23:30:10 - omnicoreagent - INFO - DeepAgent 'OmniClaw': Initializing...
+2026-02-18 23:30:10 - omnicoreagent - INFO - DeepAgent 'OmniClaw': Initialization complete
+2026-02-18 23:30:10 - omnicoreagent - WARNING - No MCP tools provided, using local tools only
+2026-02-18 23:30:10 - omnicoreagent - INFO - Successfully transformed configuration for 0 MCP tools
+2026-02-18 23:30:11 - omnicoreagent - INFO - [LoopDetector] Reset performed for all tools.
+2026-02-18 23:30:11 - omnicoreagent - INFO - Creating local memory backend at: ./memories
+2026-02-18 23:30:11 - omnicoreagent - INFO - Sending 2 messages to LLM
+2026-02-18 23:30:12 - omnicoreagent - INFO - current steps: 1

@@ -330,7 +330,8 @@ def gateway(
     """Start the nanobot gateway."""
     from nanobot.config.loader import load_config, get_data_dir
     from nanobot.bus.queue import MessageBus
-    from nanobot.agent.loop import AgentLoop
+    # Use OmniLoop (DeepAgent) instead of standard AgentLoop
+    from nanobot.agent.omni_loop import OmniLoop as AgentLoop
     from nanobot.channels.manager import ChannelManager
     from nanobot.session.manager import SessionManager
     from nanobot.cron.service import CronService
@@ -452,7 +453,8 @@ def agent(
     """Interact with the agent directly."""
     from nanobot.config.loader import load_config, get_data_dir
     from nanobot.bus.queue import MessageBus
-    from nanobot.agent.loop import AgentLoop
+    # Use OmniLoop (DeepAgent) instead of standard AgentLoop
+    from nanobot.agent.omni_loop import OmniLoop as AgentLoop
     from nanobot.cron.service import CronService
     from loguru import logger
     
