@@ -110,6 +110,7 @@ class OmniLoop:
         self.sessions = session_manager or SessionManager(workspace)
         
         # Initialize OmniCoreAgent components
+        # We revert to in_memory for now as MemoryRouter requires a DB for persistence
         self.memory_router = MemoryRouter(memory_store_type="in_memory")
         self.event_router = EventRouter(event_store_type="in_memory")
         
@@ -264,6 +265,20 @@ class OmniLoop:
         
         # Generate a session ID that persists for this user/channel
         session_id = f"{msg.channel}_{msg.chat_id}"
+
+        # Handle slash commands (copied from standard loop.py)
+        cmd = msg.content.strip().lower()
+        if cmd == "/new":
+            await self._handle_new_command(session_id, msg.channel, msg.chat_id)
+            return
+        
+        if cmd == "/help":
+            await self.bus.publish_outbound(OutboundMessage(
+                channel=msg.channel,
+                chat_id=msg.chat_id,
+                content="🐈 OmniClaw commands:\n/new — Start a new conversation (consolidate memory)\n/help — Show available commands"
+            ))
+            return
         
         # Inject the user message into the session
         # DeepAgent.run() handles this, but we want to stream events
@@ -316,3 +331,90 @@ class OmniLoop:
                 chat_id=msg.chat_id,
                 content=f"⚠️ Agent Error: {str(e)}"
             ))
+
+    async def _handle_new_command(self, session_id: str, channel: str, chat_id: str):
+        """Handle /new command: Consolidate memory and clear session."""
+        await self.bus.publish_outbound(OutboundMessage(
+            channel=channel,
+            chat_id=chat_id,
+            content="New session started. Memory consolidation in progress..."
+        ))
+
+        # 1. Fetch history from OmniCoreAgent memory
+        try:
+            history = await self.memory_router.get_messages(session_id, agent_name=self.agent.name)
+        except Exception as e:
+            logger.warning(f"Could not fetch history for consolidation: {e}")
+            history = []
+
+        # 2. Clear OmniCoreAgent memory
+        await self.memory_router.clear_memory(session_id=session_id, agent_name=self.agent.name)
+
+        # 3. Run consolidation logic (adapted from loop.py)
+        # We run this in background so we don't block
+        asyncio.create_task(self._consolidate_logic(history))
+
+    async def _consolidate_logic(self, messages: list[dict]):
+        """
+        Consolidate messages into MEMORY.md using DeepAgent/LLMProvider.
+        Adapted from AgentLoop._consolidate_memory.
+        """
+        if not messages:
+            return
+
+        from nanobot.agent.memory import MemoryStore
+        import json_repair
+        
+        memory_store = MemoryStore(self.workspace)
+        
+        # Convert OmniCoreAgent messages to simple text format
+        lines = []
+        for m in messages:
+            role = m.get("role", "unknown").upper()
+            content = m.get("content", "")
+            lines.append(f"[{m.get('timestamp', '?')}] {role}: {content}")
+        
+        conversation = "\n".join(lines)
+        current_memory = memory_store.read_long_term()
+
+        prompt = f"""You are a memory consolidation agent. Process this conversation and return a JSON object with exactly two keys:
+
+1. "history_entry": A paragraph (2-5 sentences) summarizing the key events/decisions/topics. Start with a timestamp like [YYYY-MM-DD HH:MM].
+
+2. "memory_update": The updated long-term memory content. Add any new facts, preferences, or project context. If nothing new, return existing content.
+
+## Current Long-term Memory
+{current_memory or "(empty)"}
+
+## Conversation to Process
+{conversation}
+
+Respond with ONLY valid JSON."""
+
+        try:
+            # We use self.provider directly to avoid side effects of agent state
+            response = await self.provider.chat(
+                messages=[
+                    {"role": "system", "content": "You are a memory consolidation agent. Respond only with valid JSON."},
+                    {"role": "user", "content": prompt},
+                ],
+                model=self.model,
+            )
+            
+            text = (response.content or "").strip()
+            if text.startswith("```"):
+                text = text.split("\n", 1)[-1].rsplit("```", 1)[0].strip()
+            
+            result = json_repair.loads(text)
+            
+            if entry := result.get("history_entry"):
+                memory_store.append_history(entry)
+            
+            if update := result.get("memory_update"):
+                if update != current_memory:
+                    memory_store.write_long_term(update)
+            
+            logger.info("Memory consolidation complete (OmniLoop).")
+            
+        except Exception as e:
+            logger.error(f"Memory consolidation failed in OmniLoop: {e}")
