@@ -5,7 +5,7 @@ from unittest.mock import patch
 import pytest
 from typer.testing import CliRunner
 
-from nanobot.cli.commands import app
+from omnicoreagent_claw.cli.commands import app
 
 runner = CliRunner()
 
@@ -13,10 +13,10 @@ runner = CliRunner()
 @pytest.fixture
 def mock_paths():
     """Mock config/workspace paths for test isolation."""
-    with patch("nanobot.config.loader.get_config_path") as mock_cp, \
-         patch("nanobot.config.loader.save_config") as mock_sc, \
-         patch("nanobot.config.loader.load_config") as mock_lc, \
-         patch("nanobot.utils.helpers.get_workspace_path") as mock_ws:
+    with patch("claw.config.loader.get_config_path") as mock_cp, \
+         patch("claw.config.loader.save_config") as mock_sc, \
+         patch("claw.config.loader.load_config") as mock_lc, \
+         patch("claw.utils.helpers.get_workspace_path") as mock_ws:
 
         base_dir = Path("./test_onboard_data")
         if base_dir.exists():

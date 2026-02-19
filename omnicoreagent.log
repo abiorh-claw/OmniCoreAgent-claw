@@ -18,3 +18,309 @@
 2026-02-18 23:30:11 - omnicoreagent - INFO - Creating local memory backend at: ./memories
 2026-02-18 23:30:11 - omnicoreagent - INFO - Sending 2 messages to LLM
 2026-02-18 23:30:12 - omnicoreagent - INFO - current steps: 1
+2026-02-19 14:47:51 - omnicoreagent - INFO - Initialized In-Memory Event Store
+2026-02-19 14:47:51 - omnicoreagent - INFO - DeepAgent 'OmniClaw': Initializing...
+2026-02-19 14:47:51 - omnicoreagent - INFO - DeepAgent 'OmniClaw': Initialization complete
+2026-02-19 14:47:51 - omnicoreagent - WARNING - No MCP tools provided, using local tools only
+2026-02-19 14:47:51 - omnicoreagent - INFO - Successfully transformed configuration for 0 MCP tools
+2026-02-19 14:47:51 - omnicoreagent - INFO - [LoopDetector] Reset performed for all tools.
+2026-02-19 14:47:51 - omnicoreagent - INFO - Creating local memory backend at: workspace/memories
+2026-02-19 14:47:51 - omnicoreagent - INFO - Sending 2 messages to LLM
+2026-02-19 14:48:03 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 14:48:03 - omnicoreagent - INFO - current steps: 1
+2026-02-19 14:48:03 - omnicoreagent - INFO - Sending 3 messages to LLM
+2026-02-19 14:48:03 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 14:48:03 - omnicoreagent - INFO - current steps: 2
+2026-02-19 14:48:03 - omnicoreagent - INFO - Sending 4 messages to LLM
+2026-02-19 14:48:04 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 14:48:04 - omnicoreagent - INFO - current steps: 3
+2026-02-19 14:48:04 - omnicoreagent - INFO - Sending 5 messages to LLM
+2026-02-19 14:48:05 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 14:48:05 - omnicoreagent - INFO - current steps: 4
+2026-02-19 14:48:05 - omnicoreagent - INFO - Sending 6 messages to LLM
+2026-02-19 14:48:05 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 14:48:05 - omnicoreagent - INFO - current steps: 5
+2026-02-19 14:48:05 - omnicoreagent - INFO - Sending 7 messages to LLM
+2026-02-19 14:48:06 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 14:48:06 - omnicoreagent - INFO - current steps: 6
+2026-02-19 14:48:06 - omnicoreagent - INFO - Sending 8 messages to LLM
+2026-02-19 14:48:06 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 14:48:06 - omnicoreagent - INFO - current steps: 7
+2026-02-19 14:48:06 - omnicoreagent - INFO - Sending 9 messages to LLM
+2026-02-19 14:48:07 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 14:48:07 - omnicoreagent - INFO - current steps: 8
+2026-02-19 14:48:07 - omnicoreagent - INFO - Sending 10 messages to LLM
+2026-02-19 14:48:07 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 14:48:07 - omnicoreagent - INFO - current steps: 9
+2026-02-19 14:48:07 - omnicoreagent - INFO - Sending 11 messages to LLM
+2026-02-19 14:48:08 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 14:48:08 - omnicoreagent - INFO - current steps: 10
+2026-02-19 14:48:08 - omnicoreagent - INFO - Sending 12 messages to LLM
+2026-02-19 14:48:09 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 14:48:09 - omnicoreagent - INFO - current steps: 11
+2026-02-19 14:48:09 - omnicoreagent - INFO - Sending 13 messages to LLM
+2026-02-19 14:48:09 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 14:48:09 - omnicoreagent - INFO - current steps: 12
+2026-02-19 14:48:09 - omnicoreagent - INFO - Sending 14 messages to LLM
+2026-02-19 14:48:10 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 14:48:10 - omnicoreagent - INFO - current steps: 13
+2026-02-19 14:48:10 - omnicoreagent - INFO - Sending 15 messages to LLM
+2026-02-19 14:48:10 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 14:48:10 - omnicoreagent - INFO - current steps: 14
+2026-02-19 14:48:10 - omnicoreagent - INFO - Sending 16 messages to LLM
+2026-02-19 14:48:11 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 14:48:11 - omnicoreagent - INFO - current steps: 15
+2026-02-19 14:48:11 - omnicoreagent - INFO - Sending 17 messages to LLM
+2026-02-19 15:51:45 - omnicoreagent - INFO - Loaded 2 messages from disk for session 'persist_test'
+2026-02-19 15:51:45 - omnicoreagent - INFO - Removed session file: /tmp/pytest-of-abiorh/pytest-0/test_clear_memory_removes_file0/sessions/to_clear.jsonl
+2026-02-19 15:51:45 - omnicoreagent - INFO - Removed session file: /tmp/pytest-of-abiorh/pytest-0/test_clear_all_memory0/sessions/session_0.jsonl
+2026-02-19 15:51:45 - omnicoreagent - INFO - Removed session file: /tmp/pytest-of-abiorh/pytest-0/test_clear_all_memory0/sessions/session_2.jsonl
+2026-02-19 15:51:45 - omnicoreagent - INFO - Removed session file: /tmp/pytest-of-abiorh/pytest-0/test_clear_all_memory0/sessions/session_1.jsonl
+2026-02-19 15:51:46 - omnicoreagent - WARNING - Skipping corrupt line 2 in /tmp/pytest-of-abiorh/pytest-0/test_corrupt_line_handling0/sessions/corrupt_test.jsonl: Expecting value: line 1 column 1 (char 0)
+2026-02-19 15:51:46 - omnicoreagent - INFO - Loaded 2 messages from disk for session 'corrupt_test'
+2026-02-19 17:32:22 - omnicoreagent - INFO - Initialized In-Memory Event Store
+2026-02-19 17:32:22 - omnicoreagent - INFO - DeepAgent 'OmniClaw': Initializing...
+2026-02-19 17:32:22 - omnicoreagent - INFO - DeepAgent 'OmniClaw': Initialization complete
+2026-02-19 17:32:22 - omnicoreagent - WARNING - No MCP tools provided, using local tools only
+2026-02-19 17:32:22 - omnicoreagent - INFO - Successfully transformed configuration for 0 MCP tools
+2026-02-19 17:32:22 - omnicoreagent - INFO - [LoopDetector] Reset performed for all tools.
+2026-02-19 17:32:22 - omnicoreagent - INFO - Creating local memory backend at: workspace/memories
+2026-02-19 17:32:22 - omnicoreagent - INFO - Sending 2 messages to LLM
+2026-02-19 17:32:31 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 17:32:31 - omnicoreagent - INFO - current steps: 1
+2026-02-19 17:32:31 - omnicoreagent - INFO - Sending 3 messages to LLM
+2026-02-19 17:32:32 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 17:32:32 - omnicoreagent - INFO - current steps: 2
+2026-02-19 17:32:32 - omnicoreagent - INFO - Sending 4 messages to LLM
+2026-02-19 17:32:32 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 17:32:32 - omnicoreagent - INFO - current steps: 3
+2026-02-19 17:32:32 - omnicoreagent - INFO - Sending 5 messages to LLM
+2026-02-19 17:32:33 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 17:32:33 - omnicoreagent - INFO - current steps: 4
+2026-02-19 17:32:33 - omnicoreagent - INFO - Sending 6 messages to LLM
+2026-02-19 17:32:33 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 17:32:33 - omnicoreagent - INFO - current steps: 5
+2026-02-19 17:32:33 - omnicoreagent - INFO - Sending 7 messages to LLM
+2026-02-19 17:32:34 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 17:32:34 - omnicoreagent - INFO - current steps: 6
+2026-02-19 17:32:34 - omnicoreagent - INFO - Sending 8 messages to LLM
+2026-02-19 17:32:35 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 17:32:35 - omnicoreagent - INFO - current steps: 7
+2026-02-19 17:32:35 - omnicoreagent - INFO - Sending 9 messages to LLM
+2026-02-19 17:32:35 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 17:32:35 - omnicoreagent - INFO - current steps: 8
+2026-02-19 17:32:35 - omnicoreagent - INFO - Sending 10 messages to LLM
+2026-02-19 17:32:36 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 17:32:36 - omnicoreagent - INFO - current steps: 9
+2026-02-19 17:32:36 - omnicoreagent - INFO - Sending 11 messages to LLM
+2026-02-19 17:32:36 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 17:32:37 - omnicoreagent - INFO - current steps: 10
+2026-02-19 17:32:37 - omnicoreagent - INFO - Sending 12 messages to LLM
+2026-02-19 17:37:04 - omnicoreagent - INFO - Initialized In-Memory Event Store
+2026-02-19 17:37:04 - omnicoreagent - INFO - DeepAgent 'OmniClaw': Initializing...
+2026-02-19 17:37:04 - omnicoreagent - INFO - DeepAgent 'OmniClaw': Initialization complete
+2026-02-19 17:37:04 - omnicoreagent - WARNING - No MCP tools provided, using local tools only
+2026-02-19 17:37:04 - omnicoreagent - INFO - Successfully transformed configuration for 0 MCP tools
+2026-02-19 17:37:04 - omnicoreagent - INFO - [LoopDetector] Reset performed for all tools.
+2026-02-19 17:37:04 - omnicoreagent - INFO - Loaded 1 messages from disk for session 'cli_direct'
+2026-02-19 17:37:05 - omnicoreagent - INFO - Creating local memory backend at: workspace/memories
+2026-02-19 17:37:05 - omnicoreagent - INFO - Sending 3 messages to LLM
+2026-02-19 17:37:08 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 17:37:08 - omnicoreagent - INFO - current steps: 1
+2026-02-19 17:37:08 - omnicoreagent - INFO - Sending 4 messages to LLM
+2026-02-19 17:39:12 - omnicoreagent - INFO - Initialized In-Memory Event Store
+2026-02-19 17:39:12 - omnicoreagent - INFO - DeepAgent 'OmniClaw': Initializing...
+2026-02-19 17:39:12 - omnicoreagent - INFO - DeepAgent 'OmniClaw': Initialization complete
+2026-02-19 17:39:12 - omnicoreagent - WARNING - No MCP tools provided, using local tools only
+2026-02-19 17:39:12 - omnicoreagent - INFO - Successfully transformed configuration for 0 MCP tools
+2026-02-19 17:39:12 - omnicoreagent - INFO - [LoopDetector] Reset performed for all tools.
+2026-02-19 17:39:12 - omnicoreagent - INFO - Loaded 2 messages from disk for session 'cli_direct'
+2026-02-19 17:39:13 - omnicoreagent - INFO - Creating local memory backend at: workspace/memories
+2026-02-19 17:39:13 - omnicoreagent - INFO - Sending 4 messages to LLM
+2026-02-19 17:39:16 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 17:39:16 - omnicoreagent - INFO - current steps: 1
+2026-02-19 17:39:16 - omnicoreagent - INFO - Sending 5 messages to LLM
+2026-02-19 17:39:17 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 17:39:17 - omnicoreagent - INFO - current steps: 2
+2026-02-19 17:39:17 - omnicoreagent - INFO - Sending 6 messages to LLM
+2026-02-19 17:39:17 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 17:39:17 - omnicoreagent - INFO - current steps: 3
+2026-02-19 17:39:17 - omnicoreagent - INFO - Sending 7 messages to LLM
+2026-02-19 17:39:17 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 17:39:17 - omnicoreagent - INFO - current steps: 4
+2026-02-19 17:39:17 - omnicoreagent - INFO - Sending 8 messages to LLM
+2026-02-19 17:39:18 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 17:39:18 - omnicoreagent - INFO - current steps: 5
+2026-02-19 17:39:18 - omnicoreagent - INFO - Sending 9 messages to LLM
+2026-02-19 17:39:19 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 17:39:19 - omnicoreagent - INFO - current steps: 6
+2026-02-19 17:39:19 - omnicoreagent - INFO - Sending 10 messages to LLM
+2026-02-19 17:39:19 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 17:39:19 - omnicoreagent - INFO - current steps: 7
+2026-02-19 17:39:19 - omnicoreagent - INFO - Sending 11 messages to LLM
+2026-02-19 17:39:20 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 17:39:20 - omnicoreagent - INFO - current steps: 8
+2026-02-19 17:39:20 - omnicoreagent - INFO - Sending 12 messages to LLM
+2026-02-19 17:40:23 - omnicoreagent - INFO - Initialized In-Memory Event Store
+2026-02-19 17:40:23 - omnicoreagent - INFO - DeepAgent 'OmniClaw': Initializing...
+2026-02-19 17:40:23 - omnicoreagent - INFO - DeepAgent 'OmniClaw': Initialization complete
+2026-02-19 17:40:23 - omnicoreagent - WARNING - No MCP tools provided, using local tools only
+2026-02-19 17:40:23 - omnicoreagent - INFO - Successfully transformed configuration for 0 MCP tools
+2026-02-19 17:40:23 - omnicoreagent - INFO - [LoopDetector] Reset performed for all tools.
+2026-02-19 17:40:23 - omnicoreagent - INFO - Loaded 3 messages from disk for session 'cli_direct'
+2026-02-19 17:40:23 - omnicoreagent - INFO - Creating local memory backend at: workspace/memories
+2026-02-19 17:40:23 - omnicoreagent - INFO - Sending 5 messages to LLM
+2026-02-19 17:40:26 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 17:40:26 - omnicoreagent - INFO - current steps: 1
+2026-02-19 17:40:26 - omnicoreagent - INFO - Sending 6 messages to LLM
+2026-02-19 17:40:28 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 17:40:28 - omnicoreagent - INFO - current steps: 2
+2026-02-19 17:40:28 - omnicoreagent - INFO - Sending 7 messages to LLM
+2026-02-19 17:40:31 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 17:40:31 - omnicoreagent - INFO - current steps: 3
+2026-02-19 17:40:31 - omnicoreagent - INFO - Sending 8 messages to LLM
+2026-02-19 17:41:24 - omnicoreagent - INFO - current steps: 4
+2026-02-19 17:41:24 - omnicoreagent - INFO - Sending 9 messages to LLM
+2026-02-19 17:41:36 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 17:41:36 - omnicoreagent - INFO - current steps: 5
+2026-02-19 17:41:36 - omnicoreagent - INFO - Sending 10 messages to LLM
+2026-02-19 17:41:41 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 17:41:41 - omnicoreagent - INFO - current steps: 6
+2026-02-19 17:41:42 - omnicoreagent - INFO - Sending 11 messages to LLM
+2026-02-19 17:41:44 - omnicoreagent - ERROR - Error parsing model response: expected string or bytes-like object, got 'NoneType'
+2026-02-19 17:41:44 - omnicoreagent - INFO - current steps: 7
+2026-02-19 17:41:44 - omnicoreagent - INFO - Sending 12 messages to LLM
+2026-02-19 17:43:27 - omnicoreagent - INFO - Initialized In-Memory Event Store
+2026-02-19 17:43:27 - omnicoreagent - INFO - DeepAgent 'OmniClaw': Initializing...
+2026-02-19 17:43:27 - omnicoreagent - INFO - DeepAgent 'OmniClaw': Initialization complete
+2026-02-19 17:43:27 - omnicoreagent - WARNING - No MCP tools provided, using local tools only
+2026-02-19 17:43:27 - omnicoreagent - INFO - Successfully transformed configuration for 0 MCP tools
+2026-02-19 17:43:27 - omnicoreagent - INFO - [LoopDetector] Reset performed for all tools.
+2026-02-19 17:43:27 - omnicoreagent - INFO - Loaded 4 messages from disk for session 'cli_direct'
+2026-02-19 17:43:27 - omnicoreagent - INFO - Creating local memory backend at: workspace/memories
+2026-02-19 17:43:27 - omnicoreagent - INFO - Sending 6 messages to LLM
+2026-02-19 17:43:33 - omnicoreagent - INFO - current steps: 1
+2026-02-19 17:43:33 - omnicoreagent - INFO - Sending 7 messages to LLM
+2026-02-19 17:43:36 - omnicoreagent - INFO - current steps: 2
+2026-02-19 17:51:24 - omnicoreagent - INFO - Initialized In-Memory Event Store
+2026-02-19 17:55:55 - omnicoreagent - INFO - Initialized In-Memory Event Store
+2026-02-19 17:55:57 - omnicoreagent - INFO - DeepAgent 'OmniClaw': Initializing...
+2026-02-19 17:55:57 - omnicoreagent - INFO - DeepAgent 'OmniClaw': Initialization complete
+2026-02-19 17:57:58 - omnicoreagent - WARNING - No MCP tools provided, using local tools only
+2026-02-19 17:57:58 - omnicoreagent - INFO - Successfully transformed configuration for 0 MCP tools
+2026-02-19 17:57:58 - omnicoreagent - INFO - [LoopDetector] Reset performed for all tools.
+2026-02-19 17:57:58 - omnicoreagent - INFO - Creating local memory backend at: workspace/memories
+2026-02-19 17:57:58 - omnicoreagent - INFO - Sending 2 messages to LLM
+2026-02-19 17:58:02 - omnicoreagent - INFO - current steps: 1
+2026-02-19 17:58:02 - omnicoreagent - INFO - Sending 3 messages to LLM
+2026-02-19 17:58:05 - omnicoreagent - INFO - current steps: 2
+2026-02-19 17:58:11 - omnicoreagent - INFO - [LoopDetector] Reset performed for all tools.
+2026-02-19 17:58:12 - omnicoreagent - INFO - Sending 4 messages to LLM
+2026-02-19 17:58:17 - omnicoreagent - INFO - current steps: 1
+2026-02-19 17:58:17 - omnicoreagent - INFO - Sending 5 messages to LLM
+2026-02-19 17:58:20 - omnicoreagent - INFO - current steps: 2
+2026-02-19 17:58:20 - omnicoreagent - INFO - Sending 6 messages to LLM
+2026-02-19 17:58:24 - omnicoreagent - INFO - current steps: 3
+2026-02-19 17:58:24 - omnicoreagent - INFO - Sending 7 messages to LLM
+2026-02-19 17:58:28 - omnicoreagent - INFO - current steps: 4
+2026-02-19 17:58:28 - omnicoreagent - INFO - Sending 8 messages to LLM
+2026-02-19 17:58:31 - omnicoreagent - INFO - current steps: 5
+2026-02-19 17:58:31 - omnicoreagent - INFO - Sending 9 messages to LLM
+2026-02-19 17:58:35 - omnicoreagent - INFO - current steps: 6
+2026-02-19 17:58:35 - omnicoreagent - INFO - Sending 10 messages to LLM
+2026-02-19 17:58:38 - omnicoreagent - INFO - current steps: 7
+2026-02-19 17:58:38 - omnicoreagent - INFO - Sending 11 messages to LLM
+2026-02-19 17:58:43 - omnicoreagent - INFO - current steps: 8
+2026-02-19 17:58:43 - omnicoreagent - INFO - Sending 12 messages to LLM
+2026-02-19 17:58:48 - omnicoreagent - INFO - current steps: 9
+2026-02-19 17:58:48 - omnicoreagent - INFO - Sending 13 messages to LLM
+2026-02-19 17:58:53 - omnicoreagent - INFO - current steps: 10
+2026-02-19 17:58:53 - omnicoreagent - INFO - Sending 14 messages to LLM
+2026-02-19 17:58:58 - omnicoreagent - INFO - current steps: 11
+2026-02-19 17:58:58 - omnicoreagent - INFO - Sending 15 messages to LLM
+2026-02-19 17:59:50 - omnicoreagent - ERROR - Model encountered an error, please do retry again: 1 validation error for AgentMessagePayload
+message
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+2026-02-19 18:00:14 - omnicoreagent - INFO - [LoopDetector] Reset performed for all tools.
+2026-02-19 18:00:14 - omnicoreagent - INFO - Sending 5 messages to LLM
+2026-02-19 18:00:27 - omnicoreagent - INFO - current steps: 1
+2026-02-19 18:00:27 - omnicoreagent - INFO - Sending 6 messages to LLM
+2026-02-19 18:00:33 - omnicoreagent - INFO - current steps: 2
+2026-02-19 18:00:33 - omnicoreagent - INFO - Sending 7 messages to LLM
+2026-02-19 18:00:37 - omnicoreagent - INFO - current steps: 3
+2026-02-19 18:00:37 - omnicoreagent - INFO - Sending 8 messages to LLM
+2026-02-19 18:00:43 - omnicoreagent - INFO - current steps: 4
+2026-02-19 18:00:43 - omnicoreagent - INFO - Sending 9 messages to LLM
+2026-02-19 18:00:48 - omnicoreagent - INFO - current steps: 5
+2026-02-19 18:00:48 - omnicoreagent - INFO - Sending 10 messages to LLM
+2026-02-19 18:00:54 - omnicoreagent - INFO - current steps: 6
+2026-02-19 18:00:54 - omnicoreagent - INFO - Sending 11 messages to LLM
+2026-02-19 18:00:59 - omnicoreagent - INFO - current steps: 7
+2026-02-19 18:00:59 - omnicoreagent - INFO - Sending 12 messages to LLM
+2026-02-19 18:01:05 - omnicoreagent - INFO - current steps: 8
+2026-02-19 18:01:05 - omnicoreagent - INFO - Sending 13 messages to LLM
+2026-02-19 18:01:10 - omnicoreagent - INFO - current steps: 9
+2026-02-19 18:01:10 - omnicoreagent - INFO - Sending 14 messages to LLM
+2026-02-19 18:01:16 - omnicoreagent - INFO - current steps: 10
+2026-02-19 18:01:16 - omnicoreagent - INFO - Sending 15 messages to LLM
+2026-02-19 18:01:21 - omnicoreagent - INFO - current steps: 11
+2026-02-19 18:01:21 - omnicoreagent - INFO - Sending 16 messages to LLM
+2026-02-19 18:01:26 - omnicoreagent - INFO - current steps: 12
+2026-02-19 18:01:26 - omnicoreagent - INFO - Sending 17 messages to LLM
+2026-02-19 18:01:31 - omnicoreagent - INFO - current steps: 13
+2026-02-19 18:01:31 - omnicoreagent - INFO - Sending 18 messages to LLM
+2026-02-19 18:01:36 - omnicoreagent - INFO - current steps: 14
+2026-02-19 18:01:36 - omnicoreagent - INFO - Sending 19 messages to LLM
+2026-02-19 18:01:43 - omnicoreagent - INFO - current steps: 15
+2026-02-19 18:01:43 - omnicoreagent - INFO - Sending 20 messages to LLM
+2026-02-19 18:01:49 - omnicoreagent - INFO - current steps: 16
+2026-02-19 18:01:49 - omnicoreagent - INFO - Sending 21 messages to LLM
+2026-02-19 18:01:54 - omnicoreagent - INFO - current steps: 17
+2026-02-19 18:01:54 - omnicoreagent - INFO - Sending 22 messages to LLM
+2026-02-19 18:01:59 - omnicoreagent - INFO - current steps: 18
+2026-02-19 18:01:59 - omnicoreagent - INFO - Sending 23 messages to LLM
+2026-02-19 18:02:08 - omnicoreagent - INFO - current steps: 19
+2026-02-19 18:02:08 - omnicoreagent - INFO - Sending 24 messages to LLM
+2026-02-19 18:02:13 - omnicoreagent - INFO - current steps: 20
+2026-02-19 18:02:13 - omnicoreagent - INFO - Sending 25 messages to LLM
+2026-02-19 18:02:17 - omnicoreagent - INFO - current steps: 21
+2026-02-19 18:02:17 - omnicoreagent - INFO - Sending 26 messages to LLM
+2026-02-19 18:02:25 - omnicoreagent - INFO - current steps: 22
+2026-02-19 18:02:25 - omnicoreagent - INFO - Sending 27 messages to LLM
+2026-02-19 18:02:30 - omnicoreagent - INFO - current steps: 23
+2026-02-19 18:02:30 - omnicoreagent - INFO - Sending 28 messages to LLM
+2026-02-19 18:02:36 - omnicoreagent - INFO - current steps: 24
+2026-02-19 18:02:36 - omnicoreagent - INFO - Sending 29 messages to LLM
+2026-02-19 18:02:43 - omnicoreagent - INFO - current steps: 25
+2026-02-19 18:02:43 - omnicoreagent - INFO - Sending 30 messages to LLM
+2026-02-19 18:02:48 - omnicoreagent - INFO - current steps: 26
+2026-02-19 18:02:48 - omnicoreagent - INFO - Sending 31 messages to LLM
+2026-02-19 18:02:53 - omnicoreagent - INFO - current steps: 27
+2026-02-19 18:02:53 - omnicoreagent - INFO - Sending 32 messages to LLM
+2026-02-19 18:03:00 - omnicoreagent - INFO - current steps: 28
+2026-02-19 18:03:00 - omnicoreagent - INFO - Sending 33 messages to LLM
+2026-02-19 18:03:06 - omnicoreagent - INFO - current steps: 29
+2026-02-19 18:03:06 - omnicoreagent - INFO - Sending 34 messages to LLM
+2026-02-19 18:03:10 - omnicoreagent - INFO - current steps: 30
+2026-02-19 18:07:42 - omnicoreagent - INFO - [LoopDetector] Reset performed for all tools.
+2026-02-19 18:07:42 - omnicoreagent - INFO - Sending 2 messages to LLM
+2026-02-19 18:07:45 - omnicoreagent - INFO - current steps: 1
+2026-02-19 18:07:45 - omnicoreagent - INFO - Sending 3 messages to LLM
+2026-02-19 18:07:48 - omnicoreagent - INFO - current steps: 2
+2026-02-19 18:07:58 - omnicoreagent - INFO - [LoopDetector] Reset performed for all tools.
+2026-02-19 18:07:58 - omnicoreagent - INFO - Sending 4 messages to LLM
+2026-02-19 18:08:03 - omnicoreagent - INFO - current steps: 1
+2026-02-19 18:08:03 - omnicoreagent - INFO - Sending 5 messages to LLM
+2026-02-19 18:08:08 - omnicoreagent - INFO - current steps: 2
+2026-02-19 18:08:08 - omnicoreagent - INFO - Sending 6 messages to LLM
+2026-02-19 18:08:12 - omnicoreagent - INFO - current steps: 3
+2026-02-19 18:08:12 - omnicoreagent - INFO - Sending 7 messages to LLM
+2026-02-19 18:08:17 - omnicoreagent - INFO - current steps: 4
+2026-02-19 18:08:17 - omnicoreagent - INFO - Sending 8 messages to LLM
+2026-02-19 18:08:21 - omnicoreagent - INFO - current steps: 5
+2026-02-19 18:08:21 - omnicoreagent - INFO - Sending 9 messages to LLM
+2026-02-19 18:08:25 - omnicoreagent - INFO - current steps: 6
+2026-02-19 18:08:25 - omnicoreagent - INFO - Sending 10 messages to LLM
+2026-02-19 18:08:30 - omnicoreagent - INFO - current steps: 7
+2026-02-19 18:08:30 - omnicoreagent - INFO - Sending 11 messages to LLM

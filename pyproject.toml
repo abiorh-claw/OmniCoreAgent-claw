@@ -1,13 +1,13 @@
 [project]
-name = "nanobot-ai"
-version = "0.1.4"
-description = "A lightweight personal AI assistant framework"
+name = "omnicoreagent-claw"
+version = "0.2.0"
+description = "Personal AI Agent powered by OmniCoreAgent — local-first, multi-channel, always-on"
 requires-python = ">=3.11"
 license = {text = "MIT"}
 authors = [
-    {name = "nanobot contributors"}
+    {name = "Abiola Adeshina", email = "abiolaadedayo1993@gmail.com"}
 ]
-keywords = ["ai", "agent", "chatbot"]
+keywords = ["ai", "agent", "personal-agent", "omnicoreagent", "deep-agent"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
@@ -42,6 +42,7 @@ dependencies = [
     "prompt-toolkit>=3.0.0",
     "mcp>=1.0.0",
     "json-repair>=0.30.0",
+    "omnicoreagent>=0.3.8",
 ]
 
 [project.optional-dependencies]
@@ -52,36 +53,36 @@ dev = [
 ]
 
 [project.scripts]
-nanobot = "nanobot.cli.commands:app"
+oca-claw = "omnicoreagent_claw.cli.commands:app"
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
-packages = ["nanobot"]
+packages = ["omnicoreagent_claw"]
 
 [tool.hatch.build.targets.wheel.sources]
-"nanobot" = "nanobot"
+"omnicoreagent_claw" = "omnicoreagent_claw"
 
 # Include non-Python files in skills
 [tool.hatch.build]
 include = [
-    "nanobot/**/*.py",
-    "nanobot/skills/**/*.md",
-    "nanobot/skills/**/*.sh",
+    "omnicoreagent_claw/**/*.py",
+    "omnicoreagent_claw/skills/**/*.md",
+    "omnicoreagent_claw/skills/**/*.sh",
 ]
 
 [tool.hatch.build.targets.sdist]
 include = [
-    "nanobot/",
+    "omnicoreagent_claw/",
     "bridge/",
     "README.md",
     "LICENSE",
 ]
 
 [tool.hatch.build.targets.wheel.force-include]
-"bridge" = "nanobot/bridge"
+"bridge" = "omnicoreagent_claw/bridge"
 
 [tool.ruff]
 line-length = 100
@@ -94,3 +95,4 @@ ignore = ["E501"]
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
 testpaths = ["tests"]
+
