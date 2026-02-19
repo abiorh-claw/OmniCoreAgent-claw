@@ -326,16 +326,34 @@ def _make_provider(config: Config):
 # Gateway / Server
 # ============================================================================
 
+gateway_app = typer.Typer(help="Manage the background gateway service")
+app.add_typer(gateway_app, name="gateway")
 
-@app.command()
-def gateway(
+
+def _get_gateway_paths():
+    """Get paths for gateway PID and logs."""
+    from omnicoreagent_claw.config.loader import get_config_dir
+    base = get_config_dir()
+    return base / "gateway.pid", base / "gateway.log"
+
+
+def _is_running(pid: int) -> bool:
+    """Check if a PID exists."""
+    try:
+        os.kill(pid, 0)
+    except OSError:
+        return False
+    return True
+
+
+@gateway_app.command("run")
+def gateway_run(
     port: int = typer.Option(18790, "--port", "-p", help="Gateway port"),
     verbose: bool = typer.Option(False, "--verbose", "-v", help="Verbose output"),
 ):
-    """Start the omnicoreagent-claw gateway."""
+    """Run the gateway in the foreground (blocking)."""
     from omnicoreagent_claw.config.loader import load_config, get_data_dir
     from omnicoreagent_claw.bus.queue import MessageBus
-    # Use OmniLoop (DeepAgent) instead of standard AgentLoop
     from omnicoreagent_claw.agent.omni_loop import OmniLoop as AgentLoop
     from omnicoreagent_claw.channels.manager import ChannelManager
     from omnicoreagent_claw.session.manager import SessionManager
@@ -439,6 +457,155 @@ def gateway(
             await channels.stop_all()
     
     asyncio.run(run())
+
+
+@gateway_app.command("start")
+def gateway_start(
+    port: int = typer.Option(18790, "--port", "-p", help="Gateway port"),
+):
+    """Start the gateway in background mode (daemon)."""
+    import subprocess
+    import time
+    
+    pid_file, log_file = _get_gateway_paths()
+    
+    # Check if already running
+    if pid_file.exists():
+        try:
+            pid = int(pid_file.read_text().strip())
+            if _is_running(pid):
+                console.print(f"[yellow]Gateway is already running (PID {pid})[/yellow]")
+                raise typer.Exit(0)
+            else:
+                # Stale PID file
+                console.print("[yellow]Found stale PID file. Cleaning up...[/yellow]")
+                pid_file.unlink()
+        except ValueError:
+            pid_file.unlink()
+
+    console.print(f"{__logo__} Starting gateway daemon...")
+    
+    # Open log file
+    with open(log_file, "a") as f:
+        # Launch background process using 'run' command
+        # sys.executable ensures we use the same python interpreter
+        # Use -m omnicoreagent_claw to avoid path issues with entry points
+        cmd = [sys.executable, "-m", "omnicoreagent_claw", "gateway", "run", "--port", str(port)]
+        
+        proc = subprocess.Popen(
+            cmd,
+            stdout=f,
+            stderr=f,
+            start_new_session=True,  # Detach from terminal
+        )
+    
+    # Write PID
+    pid_file.write_text(str(proc.pid))
+    console.print(f"[green]✓[/green] Started gateway (PID {proc.pid})")
+    console.print(f"  Logs: {log_file}")
+
+
+@gateway_app.command("stop")
+def gateway_stop():
+    """Stop the background gateway."""
+    pid_file, _ = _get_gateway_paths()
+    
+    if not pid_file.exists():
+        console.print("[red]Gateway is not running (no PID file)[/red]")
+        raise typer.Exit(1)
+    
+    try:
+        pid = int(pid_file.read_text().strip())
+    except ValueError:
+        console.print("[red]Invalid PID file[/red]")
+        pid_file.unlink()
+        raise typer.Exit(1)
+    
+    if not _is_running(pid):
+        console.print(f"[yellow]Gateway (PID {pid}) is not running. Cleaning up...[/yellow]")
+        pid_file.unlink()
+        return
+
+    console.print(f"Stopping gateway (PID {pid})...")
+    try:
+        os.kill(pid, signal.SIGTERM)
+        # Wait for it to die
+        for _ in range(50):  # 5 seconds timeout
+            if not _is_running(pid):
+                break
+            time.sleep(0.1)
+        else:
+            console.print("[red]Force killing...[/red]")
+            os.kill(pid, signal.SIGKILL)
+    except OSError as e:
+        console.print(f"[red]Error stopping: {e}[/red]")
+    
+    if pid_file.exists():
+        pid_file.unlink()
+    
+    console.print("[green]✓[/green] Gateway stopped")
+
+
+@gateway_app.command("restart")
+def gateway_restart(
+    port: int = typer.Option(18790, "--port", "-p", help="Gateway port"),
+):
+    """Restart the background gateway."""
+    import time
+    
+    # Try to stop manually (avoiding Typer.Exit)
+    pid_file, _ = _get_gateway_paths()
+    if pid_file.exists():
+        try:
+            content = pid_file.read_text().strip()
+            if content:
+                pid = int(content)
+                if _is_running(pid):
+                    console.print(f"Stopping gateway (PID {pid})...")
+                    os.kill(pid, signal.SIGTERM)
+                    # Wait for shutdown
+                    for _ in range(50):
+                        if not _is_running(pid):
+                            break
+                        time.sleep(0.1)
+                    else:
+                        console.print("[red]Force killing...[/red]")
+                        os.kill(pid, signal.SIGKILL)
+            
+            if pid_file.exists():
+                pid_file.unlink()
+        except Exception as e:
+            console.print(f"[yellow]Warning during stop: {e}[/yellow]")
+            if pid_file.exists():
+                pid_file.unlink()
+    
+    gateway_start(port=port)
+
+
+@gateway_app.command("status")
+def gateway_status():
+    """Check gateway status."""
+    pid_file, log_file = _get_gateway_paths()
+    
+    if pid_file.exists():
+        try:
+            pid = int(pid_file.read_text().strip())
+            if _is_running(pid):
+                console.print(f"[green]● Running[/green] (PID {pid})")
+                console.print(f"  Log: {log_file}")
+                
+                # Show last few log lines
+                if log_file.exists():
+                    console.print("\n[dim]Recent logs:[/dim]")
+                    lines = log_file.read_text().splitlines()[-5:]
+                    for line in lines:
+                        console.print(f"  [dim]{line}[/dim]")
+            else:
+                console.print("[red]● Stopped[/red] (Stale PID file)")
+        except ValueError:
+            console.print("[red]● Error[/red] (Corrupt PID file)")
+    else:
+        console.print("[dim]● Stopped[/dim]")
 
 
 
